@@ -41,11 +41,19 @@ public class MyBinarySearchTree {
         }
     }
 
+    // will print all element in increasing order
     public void printTreeInOrder(TreeNode node) {
         if (node != null) {
             printTreeInOrder(node.getLeft());
             System.out.print(node.getData() + " ");
             printTreeInOrder(node.getRight());
+        }
+    }
+
+    public void printLeftChildren(TreeNode node) {
+        if (node != null) {
+            printTreeInOrder(node.getLeft());
+            System.out.print(node.getData() + " ");
         }
     }
 }
