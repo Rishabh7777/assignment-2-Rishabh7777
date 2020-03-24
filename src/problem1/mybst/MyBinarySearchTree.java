@@ -43,4 +43,12 @@ public class MyBinarySearchTree {
             }
         }
     }
+
+    public void printTreeInOrder(TreeNode node) {
+        if (node != null) {
+            printTreeInOrder(node.getLeft());
+            System.out.print(node.getData() + " ");
+            printTreeInOrder(node.getRight());
+        }
+    }
 }
