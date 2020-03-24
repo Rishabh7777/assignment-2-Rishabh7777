@@ -13,7 +13,7 @@ public class TreeNode {
     private TreeNode right;
 
     // constructor
-    TreeNode(int data) {
+    public TreeNode(int data) {
         this.data = data;
         left = null;
         right = null;
