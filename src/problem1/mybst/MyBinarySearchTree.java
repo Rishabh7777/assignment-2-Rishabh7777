@@ -50,6 +50,11 @@ public class MyBinarySearchTree {
         }
     }
 
+    public void printTree(TreeNode node) {
+        System.out.print("Printing tree: ");
+        printTreeInOrder(node);
+    }
+
     int count = 0;  // will count nodes with no left child
 
     public void printLeftChildrenInOrder(TreeNode node) {
