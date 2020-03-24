@@ -13,11 +13,8 @@ public class MyBinarySearchTree {
 
     private TreeNode rootNode;
 
-    public int getRootNode() {
-        if (rootNode == null) {
-            return -1;
-        }
-        return rootNode.getData();
+    public TreeNode getRootNode() {
+        return rootNode;
     }
 
     public void insert(int data) {
