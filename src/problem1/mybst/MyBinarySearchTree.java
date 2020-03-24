@@ -50,10 +50,31 @@ public class MyBinarySearchTree {
         }
     }
 
-    public void printLeftChildren(TreeNode node) {
+    int count = 0;  // will count nodes with no left child
+
+    public void printLeftChildrenInOrder(TreeNode node) {
         if (node != null) {
-            printTreeInOrder(node.getLeft());
-            System.out.print(node.getData() + " ");
+            if (node.getLeft() != null) {
+                printLeftChildrenInOrder(node.getLeft());
+            } else {
+                count++;
+            }
+            if (node != rootNode) {
+                System.out.print(node.getData() + " ");
+            }
+            if (node.getRight() != null) {
+                printLeftChildrenInOrder(node.getRight().getLeft());
+                if (node.getRight().getRight() != null) {
+                    printLeftChildrenInOrder(node.getRight().getRight().getLeft());
+                }
+            }
         }
+    }
+
+    public void printLeftChildAndCount(TreeNode node) {
+        System.out.print("Printing left children: ");
+        printLeftChildrenInOrder(node);
+        System.out.println();
+        System.out.println("Total nodes with no left child: " + count);
     }
 }
