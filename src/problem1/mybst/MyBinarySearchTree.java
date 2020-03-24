@@ -13,8 +13,11 @@ public class MyBinarySearchTree {
 
     private TreeNode rootNode;
 
-    public TreeNode getRootNode() {
-        return this.rootNode;
+    public int getRootNode() {
+        if (rootNode == null) {
+            return -1;
+        }
+        return rootNode.getData();
     }
 
     public void insert(int data) {
@@ -23,19 +26,20 @@ public class MyBinarySearchTree {
             rootNode = node;
         } else {
             TreeNode temp = rootNode;
-            TreeNode parent = null;
+            TreeNode parentNode = null;
             while (temp != null) {
-                parent = temp;
-                if (node.getData() <= temp.getData()) {
+                parentNode = temp;
+                if (node.getData() < temp.getData()) {
                     temp = temp.getLeft();
                 } else {
                     temp = temp.getRight();
                 }
             }
-            if (node.getData() <= parent.getData()) {
-                parent.setLeft(node);
+            // setting child node
+            if (node.getData() < parentNode.getData()) {
+                parentNode.setLeft(node);
             } else {
-                parent.setRight(node);
+                parentNode.setRight(node);
             }
         }
     }
