@@ -14,7 +14,6 @@ public class MyMain {
 
         MyBinarySearchTree tree = new MyBinarySearchTree();
 
-        System.out.println(tree.getRootNode());
         tree.insert(70);
         tree.insert(35);
         tree.insert(93);
@@ -27,6 +26,7 @@ public class MyMain {
         tree.insert(64);
         tree.insert(99);
         tree.insert(111);
-        System.out.println(tree.getRootNode());
+
+        tree.printTreeInOrder(tree.getRootNode());
     }
 }
