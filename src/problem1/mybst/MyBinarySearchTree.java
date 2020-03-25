@@ -70,13 +70,13 @@ public class MyBinarySearchTree {
             }
             // if node has right child
             if (node.getRight() != null) {
-                reachLeftChild(node, count);
+                reachRightChild(node, count);
             }
         }
 //        System.out.print("ok" + " ");
     }
 
-    private void reachLeftChild(TreeNode node, int count) {
+    private void reachRightChild(TreeNode node, int count) {
         node = node.getRight();
         if (node.getLeft() != null) {
             printingLeftChild(node.getLeft(), count);
@@ -84,7 +84,7 @@ public class MyBinarySearchTree {
             count++;
         }
         if (node.getRight() != null) {
-            reachLeftChild(node, count);
+            reachRightChild(node, count);
         }
 //        System.out.print("works" + " ");
     }
