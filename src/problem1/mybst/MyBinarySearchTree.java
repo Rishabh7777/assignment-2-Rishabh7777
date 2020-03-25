@@ -74,6 +74,7 @@ public class MyBinarySearchTree {
                 }
             }
         }
+//        System.out.println(count);
     }
 
     public void printLeftChildAndCount(TreeNode node) {
