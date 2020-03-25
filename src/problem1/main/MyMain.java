@@ -26,14 +26,19 @@ public class MyMain {
         tree.insert(64);
         tree.insert(99);
         tree.insert(111);
+//        tree.printTree(tree.getRootNode());
 
-        tree.printTree(tree.getRootNode());
-        System.out.println();
+//        tree.printLeftChildrenAndCount(tree.getRootNode());
 
         tree.insert(5);
         tree.insert(17);
+        tree.insert(31);
+        tree.insert(3);
         tree.insert(63);
+        tree.insert(82);
         tree.insert(106);
-        tree.printLeftChildAndCount(tree.getRootNode());
+        tree.insert(109);
+        tree.insert(110);
+        tree.printLeftChildrenAndCount(tree.getRootNode());
     }
 }
