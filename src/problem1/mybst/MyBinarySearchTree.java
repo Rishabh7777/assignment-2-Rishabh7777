@@ -42,7 +42,7 @@ public class MyBinarySearchTree {
     }
 
     // will print all element in increasing order
-    public void printTreeInOrder(TreeNode node) {
+    private void printTreeInOrder(TreeNode node) {
         if (node != null) {
             printTreeInOrder(node.getLeft());
             System.out.print(node.getData() + " ");
@@ -55,32 +55,40 @@ public class MyBinarySearchTree {
         printTreeInOrder(node);
     }
 
-    int count = 0;  // will count nodes with no left child
-
-    public void printLeftChildrenInOrder(TreeNode node) {
+    private void printingLeftChild(TreeNode node, int count) {
         if (node != null) {
+
+            // if node has left child
             if (node.getLeft() != null) {
-                printLeftChildrenInOrder(node.getLeft());
+                printingLeftChild(node.getLeft(), count);
             } else {
                 count++;
             }
-            if (node != rootNode) {
-                System.out.print(node.getData() + " ");
-            }
+
+            System.out.print(node.getData() + " ");
+
+            // if node has right child
             if (node.getRight() != null) {
-                printLeftChildrenInOrder(node.getRight().getLeft());
-                if (node.getRight().getRight() != null) {
-                    printLeftChildrenInOrder(node.getRight().getRight().getLeft());
-                }
+                reachLeftChild(node, count);
             }
         }
-//        System.out.println(count);
     }
 
-    public void printLeftChildAndCount(TreeNode node) {
+    private void reachLeftChild(TreeNode node, int count) {
+        node = node.getRight();
+        if (node.getLeft() != null) {
+            printingLeftChild(node.getLeft(), count);
+        } else {
+            count++;
+        }
+        if (node.getRight() != null) {
+            reachLeftChild(node.getRight(), count);
+        }
+    }
+
+    public void printLeftChildrenAndCount(TreeNode node, int count) {
+        count = 0;
         System.out.print("Printing left children: ");
-        printLeftChildrenInOrder(node);
-        System.out.println();
-        System.out.println("Total nodes with no left child: " + count);
+        printingLeftChild(node, count);
     }
 }
