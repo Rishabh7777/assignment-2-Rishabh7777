@@ -96,6 +96,8 @@ public class MyBinarySearchTree {
         count = 0;
         System.out.print("Printing left children: ");
         printingLeftChild(node);
-        System.out.println(count);
+        System.out.println();
+        System.out.println("Total nodes with no left child: " + count);
+        System.out.println();
     }
 }
