@@ -27,7 +27,7 @@ public class MyMain {
         tree.insert(99);
         tree.insert(111);
 
-        tree.printTreeInOrder(tree.getRootNode());
+        tree.printTree(tree.getRootNode());
         System.out.println();
 
         tree.insert(5);
