@@ -21,4 +21,16 @@ public class MyQueue {
         rear = null;
         size = 0;
     }
+
+    // due to no limitation of size, element will always be added
+    public void insertInQueue(int data) {
+        Node newNode = new Node(data);
+        if (front == null) {    // means no array exists till now
+            front = rear = newNode;
+        } else {
+            rear.setNext(newNode);
+            rear = rear.getNext();
+        }
+        size++;
+    }
 }
