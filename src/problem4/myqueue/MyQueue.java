@@ -46,4 +46,21 @@ public class MyQueue {
             preOrderTraversal(node.getRight()); // calling method again for right child of node
         }
     }
+
+    public void printQueue() {
+        if (front == null) {
+            System.out.println("No queue to print.");
+        } else {
+            System.out.print("Printing Queue: ");
+            Node temp = front;
+            while (temp != null) {
+                System.out.print(temp.getData());
+                temp = temp.getNext();
+                if (temp != null) {
+                    System.out.print("----->");
+                }
+            }
+            System.out.println();
+        }
+    }
 }
