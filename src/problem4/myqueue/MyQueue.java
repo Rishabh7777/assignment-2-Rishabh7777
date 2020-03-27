@@ -7,17 +7,18 @@
 package problem4.myqueue;
 // to create queue to store pre - order successor
 
+import problem1.mybst.MyBinarySearchTree;
 import problem1.node.TreeNode;
 import problem4.node.Node;
 
-public class MyQueue {
+public class MyQueue extends MyBinarySearchTree {
 
     private Node front;
     private Node rear;  // point to the last element of queue
     private int size;
 
     // constructor
-    MyQueue() {
+    public MyQueue() {
         front = null;
         rear = null;
         size = 0;
