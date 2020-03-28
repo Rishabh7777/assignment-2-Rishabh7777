@@ -48,4 +48,9 @@ public class MyBinarySearchTree {
             preOrderTraversalWithQueue(node.getRight()); // calling method again for right child of node
         }
     }
+
+    public void printResultantQueue(TreeNode node) {
+        preOrderTraversalWithQueue(node);
+        myQueue.printQueue();
+    }
 }
