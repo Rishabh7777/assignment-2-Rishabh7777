@@ -1,6 +1,7 @@
 package problem4.bst;
 
 import problem1.node.TreeNode;
+import problem4.myqueue.MyQueue;
 
 public class MyBinarySearchTree {
 
@@ -31,6 +32,20 @@ public class MyBinarySearchTree {
             } else {
                 parentNode.setRight(node);
             }
+        }
+    }
+
+    MyQueue myQueue = new MyQueue();
+
+    public void preOrderTraversalWithQueue(TreeNode node) {
+
+        // checking if first given node is non-empty
+        if (node != null) {
+
+            myQueue.insertInQueue(node.getData());
+
+            preOrderTraversalWithQueue(node.getLeft());  // calling method again for left child of node
+            preOrderTraversalWithQueue(node.getRight()); // calling method again for right child of node
         }
     }
 }
