@@ -18,5 +18,6 @@ public class MyMain {
 
         linkedList.insertData(new Student("Rahul", 34));
         linkedList.insertData(new Student("Amit", 2));
+        linkedList.printData();
     }
 }
