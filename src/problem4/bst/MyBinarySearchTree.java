@@ -49,8 +49,25 @@ public class MyBinarySearchTree {
         }
     }
 
-    public void printResultantQueue(TreeNode node) {
+    public void printResultantQueue(int data) {
+        TreeNode node = searchNode(data);   // getting the node for given data
         preOrderTraversalWithQueue(node);
         myQueue.printQueue();
+    }
+
+    public TreeNode searchNode(int data) {
+        TreeNode response = null;
+        TreeNode temp = rootNode;
+        while (temp != null) {
+            if (temp.getData() == data) {
+                response = temp;
+                break;
+            } else if (data < temp.getData()) {
+                temp = temp.getLeft();
+            } else {
+                temp = temp.getRight();
+            }
+        }
+        return response;
     }
 }
