@@ -25,8 +25,8 @@ public class LinkedList {
         if (temp == null) {
             return "Queue is empty.";
         }
-        head.setNext(null);
         head = temp.getNext();
+        temp.setNext(null);
         return temp.getData();
     }
 
