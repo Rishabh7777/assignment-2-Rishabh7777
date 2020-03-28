@@ -20,20 +20,13 @@ public class LinkedList {
         }
     }
 
-    public String deleteFromLast() {
+    public String deleteFromBeginning() {
         Node temp = head;
-        Node parent = null;
         if (temp == null) {
             return "Queue is empty.";
         }
-        while (temp.getNext() != null) {
-            parent = temp;
-            temp = temp.getNext();
-        }
-        // after loop parent will point to second last node
-        if (parent != null) {
-            parent.setNext(null);
-        }
+        head.setNext(null);
+        head = temp.getNext();
         return temp.getData();
     }
 
