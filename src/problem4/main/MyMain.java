@@ -39,6 +39,4 @@ public class MyMain {
 
         bst.printResultantQueue(bst.getRootNode());
     }
-
-
 }
