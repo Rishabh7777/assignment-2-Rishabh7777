@@ -5,33 +5,25 @@ package problem3.node;/*
  *  Time: 7:13 PM
  */
 
+import problem3.student.Student;
+
 public class Node {
 
-    private String name;
-    private int rollNumber;
+    private Student data;
     private Node next;  // pointer to next node
 
     // constructor
-    public Node(String name, int rollNumber) {
-        this.name = name;
-        this.rollNumber = rollNumber;
-        next = null;    // initially next pointing to null
+    public Node(Student data) {
+        this.data = data;
+        this.next = null;    // initially next pointing to null
     }
 
-    public String getName() {
-        return name;
+    public Student getData() {
+        return data;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getRollNumber() {
-        return rollNumber;
-    }
-
-    public void setRollNumber(int rollNumber) {
-        this.rollNumber = rollNumber;
+    public void setData(Student data) {
+        this.data = data;
     }
 
     public Node getNext() {
