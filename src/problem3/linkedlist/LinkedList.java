@@ -8,7 +8,7 @@ public class LinkedList {
     private Node head;
     private Node tail;
 
-    public void insertData(Student student) {
+    public void insertAtLast(Student student) {
         Node newNode = new Node(student);
         if (head == null) {
             head = newNode;
