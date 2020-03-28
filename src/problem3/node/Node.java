@@ -18,8 +18,8 @@ public class Node {
         this.next = null;    // initially next pointing to null
     }
 
-    public Student getData() {
-        return data;
+    public String getData() {
+        return data.toString();
     }
 
     public void setData(Student data) {
