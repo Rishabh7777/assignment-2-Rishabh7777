@@ -52,6 +52,7 @@ public class MyBinarySearchTree {
     public void printResultantQueue(int data) {
         TreeNode node = searchNode(data);   // getting the node for given data
         preOrderTraversalWithQueue(node);
+        myQueue.deleteFromQueue();
         myQueue.printQueue();
     }
 
