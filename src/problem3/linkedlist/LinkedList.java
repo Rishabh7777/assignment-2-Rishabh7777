@@ -19,4 +19,15 @@ public class LinkedList {
             tail = tail.getNext();
         }
     }
+
+    public void printData() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.getData());
+            if (temp != tail) {
+                System.out.print("--->");
+            }
+            temp = temp.getNext();
+        }
+    }
 }
