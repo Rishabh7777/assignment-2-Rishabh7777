@@ -20,6 +20,23 @@ public class LinkedList {
         }
     }
 
+    public String deleteFromLast() {
+        Node temp = head;
+        Node parent = null;
+        if (temp == null) {
+            return "Queue is empty.";
+        }
+        while (temp.getNext() != null) {
+            parent = temp;
+            temp = temp.getNext();
+        }
+        // after loop parent will point to second last node
+        if (parent != null) {
+            parent.setNext(null);
+        }
+        return temp.getData();
+    }
+
     public void printData() {
         Node temp = head;
         while (temp != null) {
