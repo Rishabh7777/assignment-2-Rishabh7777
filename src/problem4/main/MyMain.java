@@ -37,6 +37,6 @@ public class MyMain {
         bst.insert(109);
         bst.insert(110);
 
-        bst.printResultantQueue(bst.getRootNode());
+        bst.printResultantQueue(70);
     }
 }
