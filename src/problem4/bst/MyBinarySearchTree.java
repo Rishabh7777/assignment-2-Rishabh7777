@@ -58,6 +58,7 @@ public class MyBinarySearchTree {
     public TreeNode searchNode(int data) {
         TreeNode response = null;
         TreeNode temp = rootNode;
+
         while (temp != null) {
             if (temp.getData() == data) {
                 response = temp;
@@ -68,6 +69,7 @@ public class MyBinarySearchTree {
                 temp = temp.getRight();
             }
         }
+
         return response;
     }
 }
