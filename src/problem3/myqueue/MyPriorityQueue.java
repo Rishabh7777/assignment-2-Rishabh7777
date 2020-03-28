@@ -22,6 +22,8 @@ public class MyPriorityQueue {
     }
 
     public void printQueue() {
+        System.out.print("Printing queue: ");
         linkedList.printData();
+        System.out.println();
     }
 }
