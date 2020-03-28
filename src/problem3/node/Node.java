@@ -6,4 +6,17 @@ package problem3.node;/*
  */
 
 public class Node {
+
+    private String name;
+    private int rollNumber;
+    private Node next;  // pointer to next node
+
+    // constructor
+    public Node(String name, int rollNumber) {
+        this.name = name;
+        this.rollNumber = rollNumber;
+        next = null;    // initially next pointing to null
+    }
+
+
 }
