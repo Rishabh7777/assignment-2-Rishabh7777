@@ -1,11 +1,22 @@
 package problem3.linkedlist;
 
+import problem3.node.Node;
 import problem3.student.Student;
 
 public class LinkedList {
 
-    private Student head;
-    private Student tail;
+    private Node head;
+    private Node tail;
 
-
+    public void insertData(Student student) {
+        Node newNode = new Node(student);
+        if (head == null) {
+            head = newNode;
+            head.setNext(null);
+            tail = head;
+        } else {
+            tail.setNext(newNode);
+            tail = tail.getNext();
+        }
+    }
 }
