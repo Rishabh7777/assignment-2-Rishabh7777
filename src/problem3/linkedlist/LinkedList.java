@@ -25,7 +25,7 @@ public class LinkedList {
         while (temp != null) {
             System.out.print(temp.getData());
             if (temp != tail) {
-                System.out.print("--->");
+                System.out.print(" ---> ");
             }
             temp = temp.getNext();
         }
