@@ -34,6 +34,23 @@ public class MyQueue {
         size++;
     }
 
+    public int deleteFromQueue() {
+        int response = -1;
+        if (front == null) {
+            System.out.println("Queue is empty.");
+        } else if (front.getNext() == null) {   // if queue size is 1
+            response = front.getData();
+            front = null;
+            rear = null;
+            size--;
+        } else {
+            response = front.getData();
+            front = front.getNext();
+            size--;
+        }
+        return response;
+    }
+
     public void printQueue() {
         if (front == null) {
             System.out.println("No queue to print.");
