@@ -6,7 +6,7 @@
  */
 package problem3.main;
 
-import problem3.linkedlist.LinkedList;
+import problem3.myqueue.MyPriorityQueue;
 import problem3.student.Student;
 
 // executable class
@@ -14,10 +14,16 @@ import problem3.student.Student;
 public class MyMain {
     public static void main(String[] args) {
 
-        LinkedList linkedList = new LinkedList();
+        MyPriorityQueue queue = new MyPriorityQueue();
 
-        linkedList.insertData(new Student("Rahul", 34));
-        linkedList.insertData(new Student("Amit", 2));
-        linkedList.printData();
+        queue.insertInQueue(new Student("Amit", 34));
+        queue.insertInQueue(new Student("Rahul", 12));
+        queue.insertInQueue(new Student("Shikhar", 67));
+        queue.insertInQueue(new Student("Satyam", 27));
+
+        queue.printQueue();
+
+        System.out.println(queue.deleteFromQueue());
+        queue.printQueue();
     }
 }
