@@ -7,6 +7,7 @@
 package problem1.mybst;
 
 import problem1.node.TreeNode;
+import problem4.myqueue.MyQueue;
 
 // to implement BinarySearchTree
 public class MyBinarySearchTree {
@@ -99,5 +100,20 @@ public class MyBinarySearchTree {
         System.out.println();
         System.out.println("Total nodes with no left child: " + count);
         System.out.println();
+    }
+
+    // for problem4
+    MyQueue queue = new MyQueue();
+
+    public void preOrderTraversal(TreeNode node) {
+
+        // checking if first given node is non-empty
+        if (node != null) {
+
+            queue.insertInQueue(node.getData());
+
+            preOrderTraversal(node.getLeft());  // calling method again for left child of node
+            preOrderTraversal(node.getRight()); // calling method again for right child of node
+        }
     }
 }
