@@ -14,7 +14,7 @@ public class MyPriorityQueue {
     LinkedList linkedList = new LinkedList();
 
     public void insertInQueue(Student student) {
-        linkedList.insertAtLast(student);
+        linkedList.insert(student);
     }
 
     public String deleteFromQueue() {
