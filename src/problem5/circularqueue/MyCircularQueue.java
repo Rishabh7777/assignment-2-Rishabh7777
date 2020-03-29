@@ -6,11 +6,18 @@
  */
 package problem5.circularqueue;
 
-import problem5.node.Node;
-
 //to implement circular queue
 public class MyCircularQueue {
 
-    private Node front;
-    private Node rear;
+    private int[] circularQueue;
+    private int front;
+    private int rear;
+    private int size;
+
+    public MyCircularQueue(int sizeOfArray) {
+        circularQueue = new int[sizeOfArray];
+        front = 0;
+        rear = 0;
+        size = 0;
+    }
 }
