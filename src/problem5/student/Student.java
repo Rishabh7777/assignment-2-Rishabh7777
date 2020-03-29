@@ -45,6 +45,6 @@ public class Student {
     }
 
     public String toString() {
-        return getName() + ": " + getBackLog();
+        return getName() + ": " + getBackLog() + "(" + getAppearingCount() + ")";
     }
 }
