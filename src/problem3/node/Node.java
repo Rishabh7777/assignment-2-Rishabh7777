@@ -7,7 +7,7 @@ package problem3.node;/*
 
 import problem3.student.Student;
 
-public class Node {
+public class Node implements Comparable<Student> {
 
     private Student data;
     private Node next;  // pointer to next node
@@ -32,5 +32,15 @@ public class Node {
 
     public void setNext(Node next) {
         this.next = next;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        int diff = this.data.getRollNumber() - o.getRollNumber();
+        if (diff > 0) {
+            return -1;  // newNode will be inserted before node created with o
+        } else {
+            return 1;   // newNode will be inserted after node created with o
+        }
     }
 }
