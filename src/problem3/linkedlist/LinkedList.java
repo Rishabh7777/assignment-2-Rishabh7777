@@ -8,15 +8,30 @@ public class LinkedList {
     private Node head;
     private Node tail;
 
-    public void insertAtLast(Student student) {
+    public void insertInQueue(Student student) {
         Node newNode = new Node(student);
         if (head == null) {
             head = newNode;
             head.setNext(null);
             tail = head;
         } else {
-            tail.setNext(newNode);
-            tail = tail.getNext();
+            if (head.compareTo(student) > 0) {
+                Node temp = head;
+                Node previous = null;
+                while (temp != null) {
+                    if (temp.compareTo(student) < 0) {
+                        break;
+                    }
+                    previous = temp;    // getting the node after which newNode need to be inserted
+                    temp = temp.getNext();
+                }
+                assert previous != null;
+                previous.setNext(newNode);
+                newNode.setNext(temp);
+            } else {
+                newNode.setNext(head);
+                head = newNode;
+            }
         }
     }
 
@@ -33,10 +48,7 @@ public class LinkedList {
     public void printData() {
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.getData());
-            if (temp != tail) {
-                System.out.print(" ---> ");
-            }
+            System.out.print(temp.getData() + " ");
             temp = temp.getNext();
         }
     }
