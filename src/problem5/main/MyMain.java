@@ -24,5 +24,10 @@ public class MyMain {
         System.out.println(Arrays.toString(circularQueue.printQueue()));
 
         circularQueue.deleteFromQueue();
+        circularQueue.deleteFromQueue();
+        System.out.println(circularQueue.size());
+        circularQueue.insertInQueue(new Student("Harsh", 1, 0));
+        System.out.println(circularQueue.size());
+        System.out.println(Arrays.toString(circularQueue.printQueue()));
     }
 }
