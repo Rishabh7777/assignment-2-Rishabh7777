@@ -8,7 +8,7 @@ public class LinkedList {
     private Node head;
     private Node tail;
 
-    public void insertInQueue(Student student) {
+    public void insert(Student student) {
         Node newNode = new Node(student);
         if (head == null) {
             head = newNode;
