@@ -15,9 +15,9 @@ public class Node {
     private Node next;
 
     // constructor
-    public Node(Student data, Node next) {
+    public Node(Student data) {
         this.data = data;
-        this.next = next;
+        this.next = null;
     }
 
     public String getData() {
