@@ -23,6 +23,10 @@ public class MyCircularQueue {
         size = 0;
     }
 
+    public int size() {
+        return size;
+    }
+
     public void insertInQueue(Student data) {
         if (rear < circularQueue.length) { // queue.length will always equal to initialised size of queue
 //            System.out.println(queue.length);
