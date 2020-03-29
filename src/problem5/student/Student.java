@@ -17,5 +17,15 @@ public class Student extends problem3.student.Student {
         this.backLog = backLog;
     }
 
+    public int getBackLog() {
+        return backLog;
+    }
 
+    public void setBackLog(int backLog) {
+        this.backLog = backLog;
+    }
+
+    public String toString() {
+        return getName() + ", " + getRollNumber() + ": " + getBackLog() + "(backlogs)";
+    }
 }
