@@ -61,4 +61,17 @@ public class MyCircularQueue {
         }
         return response;
     }
+
+    public Student[] printQueue() {
+        Student[] response = new Student[size];     // as rear is already increased in previous insertion
+        int index = front;
+        for (int i = 0; i < size; i++) {
+            response[i] = circularQueue[index];
+            index++;
+            if (index == circularQueue.length && rear < front) {
+                index = 0;
+            }
+        }
+        return response;
+    }
 }
