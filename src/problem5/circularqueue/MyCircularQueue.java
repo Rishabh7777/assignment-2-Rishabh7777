@@ -51,6 +51,7 @@ public class MyCircularQueue {
             System.out.println("Queue is empty.");
         } else {
             System.out.println(circularQueue[front].getName() + " has not appeared in all backlogs.");
+            front++;
         }
     }
 
