@@ -24,6 +24,13 @@ public class MyMain {
         queue.printQueue();
 
         System.out.println(queue.deleteFromQueue());
+        System.out.println(queue.deleteFromQueue());
+        /*System.out.println(queue.deleteFromQueue());
+        System.out.println(queue.deleteFromQueue());
+        System.out.println(queue.deleteFromQueue());*/
+
+        queue.insertInQueue(new Student("Rahul", 22));
+        queue.insertInQueue(new Student("Manish", 19));
         queue.printQueue();
     }
 }
