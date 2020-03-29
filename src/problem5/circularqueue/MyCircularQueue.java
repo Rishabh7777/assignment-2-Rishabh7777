@@ -20,4 +20,18 @@ public class MyCircularQueue {
         rear = 0;
         size = 0;
     }
+
+    public void insertInQueue(int element) {
+        if (rear < circularQueue.length) { // queue.length will always equal to initialised size of queue
+//            System.out.println(queue.length);
+            circularQueue[rear] = element;
+            rear++;
+            size++;
+            if (rear == circularQueue.length && size < circularQueue.length) {
+                rear = 0;
+            }
+        } else {
+            System.out.println("Queue is full.");
+        }
+    }
 }
